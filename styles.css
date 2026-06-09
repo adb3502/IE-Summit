@@ -591,13 +591,4 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
 .mobile-menu.open { transform: none; }
 .mobile-menu a { font-family: var(--font-display); font-size: 26px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 body.menu-open { overflow: hidden; }
-.break-mobile {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .break-mobile {
-    display: block;
-    width: 100%;
-  }
-}
