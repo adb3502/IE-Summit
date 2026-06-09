@@ -577,9 +577,9 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
   .info-row { grid-template-columns: 1fr; gap: 7px; padding: 15px 0; }
   .info-row .v { min-width: 0; overflow-wrap: anywhere; }
   .info-row .v a { overflow-wrap: normal; }
-  .instagram-clip { max-height: 260px; }
+  .instagram-clip { max-height: 200px; }
   .instagram-clip .instagram-media,
-  .instagram-clip iframe { max-height: 260px !important; }
+  .instagram-clip iframe { max-height: 200px !important; }
   .org-people { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
   html[data-cards="minimal"] .speaker { grid-template-columns: 48px 1fr; }
@@ -591,3 +591,13 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
 .mobile-menu.open { transform: none; }
 .mobile-menu a { font-family: var(--font-display); font-size: 26px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 body.menu-open { overflow: hidden; }
+.break-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .break-mobile {
+    display: block;
+    width: 100%;
+  }
+}
