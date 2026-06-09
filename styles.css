@@ -577,9 +577,9 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
   .info-row { grid-template-columns: 1fr; gap: 7px; padding: 15px 0; }
   .info-row .v { min-width: 0; overflow-wrap: anywhere; }
   .info-row .v a { overflow-wrap: normal; }
-  .instagram-clip { max-height: 240px; }
+  .instagram-clip { max-height: 260px; }
   .instagram-clip .instagram-media,
-  .instagram-clip iframe { max-height: 240px !important; }
+  .instagram-clip iframe { max-height: 260px !important; }
   .org-people { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
   html[data-cards="minimal"] .speaker { grid-template-columns: 48px 1fr; }
