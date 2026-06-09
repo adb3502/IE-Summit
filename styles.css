@@ -459,20 +459,36 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
 }
 /* Circulation keyframes — cells drift fully across the hero */
 @keyframes bcirc-lr {
-  from { transform: translateX(-80px) rotate(-6deg); }
-  to   { transform: translateX(calc(100vw + 80px)) rotate(6deg); }
+  0%   { transform: translate(-90px, 16px) scale(.92) rotate(-8deg); }
+  18%  { transform: translate(16vw, -28px) scale(1.03) rotate(7deg); }
+  39%  { transform: translate(38vw, 32px) scale(.96) rotate(-3deg); }
+  62%  { transform: translate(63vw, -18px) scale(1.08) rotate(9deg); }
+  82%  { transform: translate(84vw, 26px) scale(.98) rotate(-6deg); }
+  100% { transform: translate(calc(100vw + 90px), -10px) scale(1.02) rotate(6deg); }
 }
 @keyframes bcirc-rl {
-  from { transform: translateX(calc(100vw + 80px)) rotate(6deg); }
-  to   { transform: translateX(-80px) rotate(-6deg); }
+  0%   { transform: translate(calc(100vw + 90px), -18px) scale(1.04) rotate(8deg); }
+  21%  { transform: translate(78vw, 30px) scale(.94) rotate(-7deg); }
+  44%  { transform: translate(55vw, -24px) scale(1.07) rotate(4deg); }
+  67%  { transform: translate(31vw, 34px) scale(.98) rotate(-10deg); }
+  86%  { transform: translate(12vw, -14px) scale(1.03) rotate(5deg); }
+  100% { transform: translate(-90px, 18px) scale(.95) rotate(-6deg); }
 }
 @keyframes bcirc-d1 {
-  from { transform: translate(calc(100vw + 80px), -40px) rotate(12deg); }
-  to   { transform: translate(-80px, 40px) rotate(-12deg); }
+  0%   { transform: translate(calc(100vw + 90px), -42px) scale(.96) rotate(12deg); }
+  16%  { transform: translate(82vw, 18px) scale(1.08) rotate(-4deg); }
+  36%  { transform: translate(61vw, -34px) scale(.93) rotate(9deg); }
+  57%  { transform: translate(42vw, 36px) scale(1.04) rotate(-11deg); }
+  79%  { transform: translate(18vw, -10px) scale(.99) rotate(6deg); }
+  100% { transform: translate(-90px, 42px) scale(1.03) rotate(-12deg); }
 }
 @keyframes bcirc-d2 {
-  from { transform: translate(-80px, 50px) rotate(-10deg); }
-  to   { transform: translate(calc(100vw + 80px), -30px) rotate(10deg); }
+  0%   { transform: translate(-90px, 48px) scale(1.02) rotate(-10deg); }
+  19%  { transform: translate(19vw, -22px) scale(.94) rotate(8deg); }
+  41%  { transform: translate(43vw, 30px) scale(1.09) rotate(-5deg); }
+  63%  { transform: translate(66vw, -36px) scale(.97) rotate(11deg); }
+  84%  { transform: translate(86vw, 14px) scale(1.04) rotate(-7deg); }
+  100% { transform: translate(calc(100vw + 90px), -30px) scale(.96) rotate(10deg); }
 }
 /* Cell placement — top sets y-track, animation drives x */
 .bio-1  { width:72px; top: 8%;  left:0; opacity:.18; animation: bcirc-lr 55s linear infinite;       }
