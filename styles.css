@@ -307,6 +307,9 @@ section { position: relative; }
 .speaker .meta .name { font-family: var(--font-display); font-size: 21px; line-height: 1.1; }
 .speaker .meta .affil { font-family: var(--font-sans); font-size: 12.5px; letter-spacing: .03em; color: var(--accent); margin-top: 8px; }
 .speaker .meta .topic { font-size: 14.5px; color: var(--muted); margin-top: 12px; line-height: 1.45; }
+.speaker .meta .website { margin-top: 12px; }
+.speaker .meta .website a { font-family: var(--font-sans); font-size: 12.5px; color: var(--accent); text-decoration: none; letter-spacing: .03em; }
+.speaker .meta .website a:hover { text-decoration: underline; }
 .speaker .tag { position: absolute; top: 14px; left: 14px; z-index: 3; font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: color-mix(in srgb, var(--surface) 80%, transparent); backdrop-filter: blur(6px); color: var(--ink-soft); padding: 5px 9px; border: 1px solid var(--line-soft); }
 .speaker.host .tag { background: var(--accent); color: var(--accent-contrast); border-color: transparent; }
 
