@@ -374,6 +374,16 @@ html[data-direction="C"] .reg-tier { background: var(--surface); border-color: v
 .reg-tier .who { font-family: var(--font-display); font-size: 19px; }
 .reg-tier .who small { display: block; font-family: var(--font-sans); font-size: 12px; letter-spacing: .04em; opacity: .65; margin-top: 3px; }
 .reg-tier .price { font-family: var(--font-sans); font-weight: 600; font-size: 15px; letter-spacing: .04em; white-space: nowrap; }
+.fee-table-wrap { overflow-x: auto; }
+.fee-note { font-family: var(--font-sans); font-size: 13px; opacity: .65; margin-bottom: 16px; line-height: 1.5; }
+.fee-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); }
+.fee-table th, .fee-table td { padding: 13px 18px; border: 1px solid color-mix(in srgb, var(--bg) 16%, transparent); font-size: 14px; }
+html[data-direction="C"] .fee-table th, html[data-direction="C"] .fee-table td { border-color: var(--line); }
+.fee-table thead th { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; opacity: .6; font-weight: 600; text-align: left; }
+.fee-table thead th:first-child { width: 28%; }
+.fee-table tbody th { font-family: var(--font-display); font-size: 16px; font-weight: normal; background: color-mix(in srgb, var(--bg) 8%, transparent); }
+html[data-direction="C"] .fee-table tbody th { background: var(--surface-2); }
+.fee-table td { font-weight: 600; letter-spacing: .03em; }
 .cta-band p.muted { color: color-mix(in srgb, var(--bg) 70%, transparent); }
 html[data-direction="C"] .cta-band p.muted { color: var(--muted); }
 
