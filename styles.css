@@ -408,6 +408,10 @@ html[data-direction="C"] .cta-band p.muted { color: var(--muted); }
 
 /* ---------- Poster / Abstract ---------- */
 .poster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px,6vw,80px); align-items: center; }
+/* Inline link inside body copy — the base reset strips colour and underline,
+   so mid-sentence links need this to read as links. Matches .info-row .v a. */
+.inline-link { color: var(--accent); border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); transition: border-color .2s, color .2s; }
+.inline-link:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
 .steps { display: grid; gap: 0; }
 .step { display: grid; grid-template-columns: auto 1fr; gap: 22px; padding: 24px 0; border-top: 1px solid var(--line); }
 .step:last-child { border-bottom: 1px solid var(--line); }
