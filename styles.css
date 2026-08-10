@@ -554,13 +554,10 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
 .bio-1  { width:72px; top: 8%;  left:0; opacity:.18; }
 .bio-2  { width:60px; top:22%;  left:0; opacity:.16; }
 .bio-3  { width:55px; top:40%;  left:0; opacity:.15; }
-.bio-4  { width:58px; top:58%;  left:0; opacity:.15; }
 .bio-5  { width:52px; top:75%;  left:0; opacity:.14; }
 .bio-6  { width:68px; top:14%;  left:0; opacity:.15; }
-.bio-7  { width:50px; top:32%;  left:0; opacity:.14; }
 .bio-8  { width:54px; top:50%;  left:0; opacity:.16; }
 .bio-9  { width:65px; top:68%;  left:0; opacity:.13; }
-.bio-10 { width:48px; top: 2%;  left:0; opacity:.13; }
 .bio-11 { width:48px; top:85%;  left:0; opacity:.13; }
 .bio-12 { width:66px; top:46%;  left:0; opacity:.15; }
 .bio-13 { width:46px; top:20%;  left:0; opacity:.14; }
@@ -568,7 +565,7 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
 .bio-15 { width:62px; top:30%;  left:0; opacity:.14; }
 .bio-16 { width:70px; top:80%;  left:0; opacity:.12; }
 @media (max-width:680px) {
-  .bio-7,.bio-9,.bio-10,.bio-11,.bio-14,.bio-16 { display: none; }
+  .bio-9,.bio-11,.bio-14,.bio-16 { display: none; }
 }
 .lab-photo-frame {
   display: inline-block;
@@ -577,15 +574,17 @@ html[data-direction="C"] .footer-bottom { color: var(--muted); }
   box-shadow: 0 4px 16px rgba(0,0,0,.16), 0 16px 48px -16px rgba(0,0,0,.22);
   transform: rotate(-3deg);
   transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s;
-  max-width: 400px;
+  max-width: 460px;
   width: 100%;
 }
 .lab-photo-frame:hover {
   transform: rotate(0deg);
   box-shadow: 0 8px 28px rgba(0,0,0,.18), 0 24px 60px -18px rgba(0,0,0,.28);
 }
+/* Matches the photo's own 16:9 — a 4/3 crop would cut the people standing at
+   each end of the group out of frame. */
 .lab-photo-frame img {
-  width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover;
+  width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover;
 }
 .lab-photo-caption {
   font-family: "Caveat", cursive;
