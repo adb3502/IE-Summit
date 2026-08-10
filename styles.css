@@ -362,7 +362,9 @@ html[data-direction="C"] .day-tab[aria-selected="true"] { background: var(--acce
 
 /* ---------- Registration / CTA band ---------- */
 .cta-band { background: var(--ink); color: var(--bg); }
-html[data-direction="C"] .cta-band { background: var(--bg-tint); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+/* Direction C overrides the band background to a dark tint, so the inherited
+   `color: var(--bg)` from .cta-band would be dark-on-dark. */
+html[data-direction="C"] .cta-band { background: var(--bg-tint); color: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .cta-band .section-title { color: var(--bg); }
 html[data-direction="C"] .cta-band .section-title { color: var(--ink); }
 .cta-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(36px,6vw,80px); align-items: center; }
@@ -381,6 +383,16 @@ html[data-direction="C"] .reg-btn { background: var(--surface); border-color: va
 .reg-btn .fee { font-family: var(--font-sans); font-size: 13px; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
 .reg-btn .state { font-family: var(--font-sans); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .6; margin-top: 2px; }
 .reg-btn[disabled] { opacity: .78; }
+a.reg-btn { cursor: pointer; text-decoration: none; }
+a.reg-btn:hover { border-color: var(--accent); background: color-mix(in srgb, var(--bg) 14%, transparent); transform: translateY(-2px); }
+html[data-direction="C"] a.reg-btn:hover { background: var(--surface-2); }
+/* The CTA band is dark in every direction, so the live-state label needs a
+   light accent — --accent-deep is only legible against it in direction C. */
+.reg-btn.is-live .state { opacity: .95; color: #7fd8d2; }
+html[data-direction="B"] .reg-btn.is-live .state { color: #e0a27a; }
+html[data-direction="C"] .reg-btn.is-live .state { color: var(--accent-deep); }
+.reg-btn .state .arrow { display: inline-block; transition: transform .25s; }
+a.reg-btn:hover .state .arrow { transform: translateX(4px); }
 .fee-table-wrap { overflow-x: auto; }
 .fee-note { font-family: var(--font-sans); font-size: 13px; opacity: .65; margin-bottom: 16px; line-height: 1.5; }
 .fee-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); }
