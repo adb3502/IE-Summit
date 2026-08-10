@@ -230,6 +230,21 @@ section { position: relative; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; padding-top: 76px; background: var(--hero-bg); overflow: hidden; }
+
+/* Desktop: the brand lockup is sized for narrow viewports and reads small on a
+   wide screen. Scale the mark and wordmark up, and grow the bar to match. The
+   nav collapses to the hamburger at 920px, so 1024px is safely desktop. This
+   block sits after both .nav and .hero so it wins the cascade — media queries
+   add no specificity. .hero padding-top must track .nav height, or the hero
+   slides under the fixed bar. */
+@media (min-width: 1024px) {
+  .nav { height: 92px; }
+  .hero { padding-top: 92px; }
+  .brand { gap: 18px; }
+  .brand-mark { width: 58px; height: 58px; }
+  .brand-text b { font-size: 20.5px; }
+  .brand-text span { font-size: 12.5px; margin-top: 4px; }
+}
 .hero-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: center; min-height: min(86vh, 820px); padding: 56px 0; }
 .hero-content { position: relative; z-index: 2; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-family: var(--font-sans); font-size: 13px; letter-spacing: .04em; color: var(--muted); margin-bottom: 26px; }
