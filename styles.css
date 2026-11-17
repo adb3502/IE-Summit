@@ -401,7 +401,7 @@ html[data-direction="C"] .reg-btn { background: var(--surface); border-color: va
 .reg-btn .who { font-family: var(--font-display); font-size: 19px; line-height: 1.1; }
 .reg-btn .fee { font-family: var(--font-sans); font-size: 13px; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
 .reg-btn .state { font-family: var(--font-sans); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .6; margin-top: 2px; }
-.reg-btn[disabled] { opacity: .78; }
+.reg-btn[disabled], .reg-btn[aria-disabled="true"] { opacity: .78; }
 a.reg-btn { cursor: pointer; text-decoration: none; }
 a.reg-btn:hover { border-color: var(--accent); background: color-mix(in srgb, var(--bg) 14%, transparent); transform: translateY(-2px); }
 html[data-direction="C"] a.reg-btn:hover { background: var(--surface-2); }
