@@ -225,6 +225,7 @@ section { position: relative; }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after { width: 100%; }
 .nav-cta { margin-left: 4px; padding: 11px 40px; }
+.nav-links a.nav-cta, .nav-links a.nav-cta:hover { color: #ffffff; }
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; transition: .3s; }
 

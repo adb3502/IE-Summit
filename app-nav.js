@@ -64,7 +64,7 @@
   // ---- Active nav link on scroll ----
   var sections = ["about", "speakers", "program", "posters", "venue", "contact"];
   var navLinks = {};
-  document.querySelectorAll(".nav-links a[href^='#']").forEach(function (a) {
+  document.querySelectorAll(".nav-links a[href^='#']:not(.btn)").forEach(function (a) {
     navLinks[a.getAttribute("href").slice(1)] = a;
   });
   if ("IntersectionObserver" in window) {
